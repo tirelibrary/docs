@@ -1,0 +1,79 @@
+title: Tire Library API
+
+language_tabs:
+  - csharp
+  - php
+  - ruby
+
+toc_footers:
+  - <a href='https://tirelibrary.com'>Sign up with Tire Library API!</a>
+  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+
+includes:
+  - main
+
+# General: Authentication and Errors
+  - general/_getting_started
+  - general/_authentication
+  - general/_errors
+  - general/_default_parameters
+
+# Search endpoints
+  - search/_search
+  - search/_search_tires
+  - search/_search_makes
+  - search/_search_models
+  - search/_search_sizes
+
+# Sizes endpoints
+  - sizes/_sizes
+  - sizes/_sizes_get_all
+  - sizes/_sizes_get_id
+  - sizes/_sizes_get_id_others
+
+# Models endpoints
+  - models/_models
+  - models/_models_get_all
+  - models/_models_get_id
+  - models/_models_get_id_sizes
+  # - models/_models_get_id_rebates
+
+# Rebates endpoints
+  # - rebates/_rebates
+  # - rebates/_rebates_get_all
+  # - rebates/_rebates_get_id
+
+# Makes endpoints
+  - makes/_makes
+  - makes/_makes_get_all
+  - makes/_makes_get_id
+  - makes/_makes_get_id_models
+
+# Classes endpoints
+  - classes/_classes
+  - classes/_classes_get_all
+  - classes/_classes_get_id
+  - classes/_classes_get_id_subclasses
+
+# SubClasses endpoints
+  - subclasses/_subclasses
+  - subclasses/_subclasses_get_all
+  - subclasses/_subclasses_get_id
+  - subclasses/_subclasses_get_id_models
+
+# Datasheets endpoints
+  - datasheets/_datasheets
+  - datasheets/_datasheets_generate
+
+# Mapping endpoints
+  - mapping/_mapping
+  - mapping/_mapping_csv_upload
+  - mapping/_mapping_json
+
+# General: Bug Report
+  - general/_changelog
+  - general/_issues
+
+search: true
+
+highlight_theme: monokai
