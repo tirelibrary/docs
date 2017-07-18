@@ -1,5 +1,13 @@
 # Changelog
 
+## 15/07/2017
+
+### Breaking Changes
+
+* The mapping endpoint `Mapping via JSON` with url `https://api.tirelibrary.com/v1/mapping/results/package/:packageId` has been deprecated and will be removed on the 31st of October;
+* A new version of `Mapping via JSON` has been added at the url `https://api.tirelibrary.com/v1/mapping/execute.json`. This endpoint now accepts an `Options` object containing all the settings required for Mapping, you are also able to retrieve extra fields from Tire Library API and to map your items using different modes; and
+* The mapping process is now in Beta! Tokenization is still undergoing improvements and will be added in the coming weeks.
+
 ## 28/06/2017
 
 ### Changes
@@ -65,7 +73,9 @@
   * `mapping/results/:userId/package/:packageId/upload`;
     * Allows the execution of rules and verification of tires via the Mapping API based on a specific user and package. Objects must be sent via a CSV file.
 
-## 27/04/2017
+## Archived
+
+### 27/04/2017
 
 ### Breaking Changes
 
@@ -87,7 +97,7 @@
     * `subClass` has been renamed to `subclass`.
 
 
-## 21/04/2017
+### 21/04/2017
 
 ### New Features
 

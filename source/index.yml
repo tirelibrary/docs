@@ -69,6 +69,7 @@ includes:
   - mapping/_mapping
   - mapping/_mapping_csv_upload
   - mapping/_mapping_json
+  - mapping/_mapping_json_v1
 
 # General: Bug Report
   - general/_changelog
