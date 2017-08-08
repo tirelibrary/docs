@@ -2,6 +2,9 @@
 
 ## 07/08/2017
 
+### Changes
+
+* The Get All Makes endpoint (`data/makes`) now takes in an optional `all` parameter, this will retrieve all makes in one go as opposed to multiple pages / requests. Sample: `data/makes?all=true`.
 * The mapping endpoint `Mapping via CSV` with url `https://api.tirelibrary.com/v1/mapping/results/package/:packageId/upload` has been deprecated and will be removed on the 31st of October;
 * A new version of `Mapping via CSV` has been added at the url `https://api.tirelibrary.com/v1/mapping/execute.csv`. This endpoint now accepts an `Options` object (via JSON) containing all the settings required for Mapping and a `Files` header containing the CSV file with the required fields. You are also able to retrieve extra fields from Tire Library API and to map your items using different modes.
 

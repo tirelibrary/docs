@@ -60,6 +60,14 @@ https://api.tirelibrary.com/v1/data/makes`
 Requires a Professional Developer plan with Tire Library API.
 </aside>
 
+### Query Parameters
+
+Parameter | Value | Description
+--------- | ----- | -----------
+all | true | Requests all makes in one go as opposed to multiple pages.
+
+Sample: `data/makes?all=true`
+
 ### Response Parameters
 
 An array of Tire Make objects.
