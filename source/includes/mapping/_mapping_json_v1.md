@@ -38,6 +38,10 @@ https://api.tirelibrary.com/v1/mapping/results/package/:packageId`
 Requires a Developer or Standard plan with Tire Library API and the Mapping Add-on.
 </aside>
 
+<aside class="warning">
+Tokenization is currently undergoing performance improvements.
+</aside>
+
 ### Query Parameters
 
 Parameter | Description
