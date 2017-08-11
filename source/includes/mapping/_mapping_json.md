@@ -61,7 +61,7 @@ This endpoint allows you to execute mapping via JSON on a specific set of Mappin
 https://api.tirelibrary.com/v1/mapping/execute.json`
 
 <aside class="notice">
-Requires a Developer or Standard plan with Tire Library API and the Mapping Add-on.
+Requires a Developer plan with Tire Library API and the Mapping Add-on.
 </aside>
 
 <aside class="warning">

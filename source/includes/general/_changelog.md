@@ -1,5 +1,15 @@
 # Changelog
 
+## 09/08/2017
+
+### Breaking Changes
+
+* The `Max Inflation Pressure` field for Tire Sizes is now an integer as opposed to a string. The following endpoints make use of this object:
+  * Get All Sizes;
+  * Get Size by Id;
+  * Get other Tire Sizes in Model by Tire Size Id; and
+  * Get Model Sizes by Model Id.
+
 ## 07/08/2017
 
 ### Changes

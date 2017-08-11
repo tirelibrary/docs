@@ -61,7 +61,7 @@
             "starRating": null,
             "loadCapacitySingle": "1290",
             "loadCapacityDual": null,
-            "maxInflationPressure": "35",
+            "maxInflationPressure": 35,
             "weight": null,
             "approvedRimWidth": null,
             "measuringRimWidth": null,
@@ -148,7 +148,7 @@ plyRating | string | A string containing the amount of load the tire can safely 
 starRating | string | A string containing the
 loadCapacitySingle | string | A string containing the
 loadCapacityDual | string | A string containing the
-maxInflationPressure | string | A string containing the
+maxInflationPressure | integer | An integer containing the
 weight | double | A double containing the
 approvedRimWidth | string | A string containing the
 measuringRimWidth | string | A string containing the
