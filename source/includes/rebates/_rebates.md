@@ -1,1 +1,1 @@
-# Rebates
+# Rebates API
