@@ -18,6 +18,9 @@
     
     uri = URI('https://api.tirelibrary.com/v1/data/makes')
 
+    # Adding the all parameter to the URI.
+    uri.query = URI.encode_www_form all: true
+
     request = Net::HTTP::Get.new uri
 
     # Adding the API Key.
@@ -65,8 +68,6 @@ Requires a Professional Developer plan with Tire Library API.
 Parameter | Value | Description
 --------- | ----- | -----------
 all | true | Requests all makes in one go as opposed to multiple pages.
-
-Sample: `data/makes?all=true`
 
 ### Response Parameters
 

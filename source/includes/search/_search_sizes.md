@@ -1,4 +1,4 @@
-## Search Sizes (Specific)
+## Search Sizes (Sizes Only)
 
 ```csharp
     HttpClient client = new HttpClient
@@ -10,7 +10,7 @@
 
     // Hitting the endpoint.
     object response = Newtonsoft.Json.JsonConvert.DeserializeObject
-        (await client.GetStringAsync("search/sizes?q=a"));
+        (await client.GetStringAsync("search/sizes?q=a&sectionWidth=225&aspectRatio=60&rimSize=16&page=1&pageSize=30&all=true"));
 ```
 
 ```ruby
@@ -19,7 +19,13 @@
     uri = URI('https://api.tirelibrary.com/v1/search/sizes')
 
     # Adding the search parameter to the URI.
-    uri.query = URI.encode_www_form q: 'a'
+    uri.query = URI.encode_www_form(q: 'a', 
+                                    sectionWidth: 225, 
+                                    aspectRatio: 60, 
+                                    rimSize: 16, 
+                                    page: 1, 
+                                    pageSize: 30, 
+                                    all: true)
 
     request = Net::HTTP::Get.new uri
 
@@ -73,9 +79,15 @@ Requires a Developer plan with Tire Library API.
 
 ### Query Parameters
 
-Parameter | Description
---------- | -----------
-q | Used to search for specific results.
+Parameter | Type | Required | Default | Description
+--------- | ---- | -------- | ------- | -----------
+q | string | Yes | - | Used to search for specific results. A list of properties that can be searched for are listed below.
+sectionWidth | double | No | - | The section width of the tire.
+aspectRatio | double | No | - | The aspect ratio of the tire.
+rimSize | double | No | - | The rim size of the tire.
+page | int | No | 1 | The page to be retrieved from the search results.
+pageSize | int | No | 30 | The amount of items to be retrieved on the page. Max value is 1000.
+all | boolean | No | false | Retrieves all fields for the search result items.
 
 ### Response Parameters
 

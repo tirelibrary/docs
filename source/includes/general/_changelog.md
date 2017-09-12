@@ -1,5 +1,18 @@
 # Changelog
 
+## 30/08/2017
+
+### Changes
+
+* The following endpoints have been updated and now can receive extra parameters for better search filtering:
+  * [Search Sizes (General)](https://developer.tirelibrary.com/#search-sizes-general-):
+    * Now receives `filters` which can consist of any field to improve search results; and
+    * Also accepts `page` and `pageSize` to define the amount of results to be returned on a per-search basis.
+  * [Search Sizes (Sizes Only)](https://developer.tirelibrary.com/#search-sizes-sizes-only-):
+    * Now receives `sectionWidth`, `aspectRatio` and `rimSize` to better search tires by size specifically;
+    * Also accepts `page` and `pageSize` to define the amount of results to be returned on a per-search basis; and
+    * Can take in the `all` parameter (defaulted to `false`) to retrieve all fields for the results as opposed to just the usual set.
+
 ## 09/08/2017
 
 ### Breaking Changes
@@ -26,13 +39,14 @@
 * A new version of `Mapping via JSON` has been added at the url `https://api.tirelibrary.com/v1/mapping/execute.json`. This endpoint now accepts an `Options` object containing all the settings required for Mapping, you are also able to retrieve extra fields from Tire Library API and to map your items using different modes; and
 * The mapping process is now in Beta! Tokenization is still undergoing improvements and will be added in the coming weeks.
 
-## 28/06/2017
+## Archived
+### 28/06/2017
 
 ### Changes
 
 * The `templates/datasheets/:id` endpoint is now stable and has been re-added to the documentation.
 
-## 12/06/2017
+### 12/06/2017
 
 ### Breaking Changes
 
@@ -58,7 +72,7 @@
   * Renaming `classGroups` to `classes` and their respective singular forms within the classes and subclasses endpoints; and
   * The urls for subclass-related endpoints have been updated to have actual data being retrieved.
 
-## 12/05/2017
+### 12/05/2017
 
 ### New Features
 
@@ -81,7 +95,7 @@
   * `/mapping/results/package/:packageId/upload` Mapping via CSV endpoint:
     * No longer retrieves `productCode` and `possibleMakes`.
 
-## 02/05/2017
+### 02/05/2017
 
 ### New Features
 
@@ -90,8 +104,6 @@
     * Allows the execution of rules and verification of tires via the Mapping API based on a specific user and package. Objects must be sent via a JSON request.
   * `mapping/results/:userId/package/:packageId/upload`;
     * Allows the execution of rules and verification of tires via the Mapping API based on a specific user and package. Objects must be sent via a CSV file.
-
-## Archived
 
 ### 27/04/2017
 

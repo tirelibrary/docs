@@ -10,7 +10,7 @@
 
     // Hitting the endpoint.
     object response = Newtonsoft.Json.JsonConvert.DeserializeObject
-        (await client.GetStringAsync("search?q=2056016"));
+        (await client.GetStringAsync("search?q=2056016&filters=speedrating:h&page=1&pagesize=30"));
     
     // See the parameters section for the accepted search parameters for this endpoint.
 ```
@@ -21,7 +21,10 @@
     uri = URI('https://api.tirelibrary.com/v1/search')
 
     # Adding the search parameter to the URI.
-    uri.query = URI.encode_www_form q: '2056016'
+    uri.query = URI.encode_www_form(q: '2056016', 
+                                    filters: 'speedrating:h', 
+                                    page: 1, 
+                                    pagesize: 30)
 
     request = Net::HTTP::Get.new uri
 
@@ -72,15 +75,18 @@ Requires a Developer plan with Tire Library API.
 
 ### Query Parameters
 
-Parameter | Description
---------- | -----------
-q | Used to search for specific results. A list of properties that can be searched for are listed below.
+Parameter | Type | Required | Default | Description
+--------- | ---- | -------- | ------- | -----------
+q | string | Yes | - | Used to search for specific results. A list of properties that can be searched for are listed below.
+filters | string | No | - | Comma-delimited string of fields to filter the query. Sample: `speedrating:h,rimsize:16`.
+page | int | No | 1 | The page to be retrieved from the search results.
+pageSize | int | No | 30 | The amount of items to be retrieved on the page. Max value is 1000.
 
 ### Search Properties
 
 You can search for tires based on:
-- Size;
-- Make;
+- Size; and
+- Make.
 
 ### Response Parameters
 
