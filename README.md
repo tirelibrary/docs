@@ -2,7 +2,7 @@
 
 ### Based on:
 
-<p align="center"><i><a href="https://github.com/lord/slate">lord/slate</a>; and</i></p>
+<p align="center"><i><a href="https://github.com/sdelements/node-slate">sdelements/slate</a>; and</i></p>
 <p align="center"><i>A Node.js port of <a href="https://github.com/lord/slate">lord/slate</a></i></p>
 
 This documentation is actively maintained by E-Solution Professionals.
