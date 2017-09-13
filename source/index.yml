@@ -72,6 +72,12 @@ includes:
   - mapping/_mapping_json_v1
   - mapping/_mapping_csv_upload_v1
 
+# Data Types
+  - data-types/_data_types
+  - data-types/_data_types_tire_size
+  - data-types/_data_types_tire_model
+  - data-types/_data_types_tire_make
+
 # General: Bug Report
   - general/_changelog
   - general/_issues

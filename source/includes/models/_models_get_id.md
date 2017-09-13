@@ -82,36 +82,15 @@ Requires a Professional Developer plan with Tire Library API.
 
 Parameter | Description
 --------- | -----------
-id | Tire Model Id to be used in the search for the specific tire model.
+id | The tire Model Id to be used in the search for the specific tire model.
 
 ### Response Parameters
 
 A Tire Model object.
 
-#### Tire Model Object Parameters
-
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | The identifier for the given tire model within Tire Library.
-name | string | The name of the given tire model.
-description | string | The description of the tire model.
-benefits | string | The benefits of the tire model, delimited by '*' (asterisk) characters.
-features | string | The features of the tire model, delimited by '*' (asterisk) characters.
-manufacturerUrl | string | The link to the manufacturer of the tire model.
-videoUrl | string | The link of
-imageUrl | string | The link to the image of the tire model.
-rotationImageUrls | string | An array of 24 strings containing the image links for viewing the tire model from multiple angles.
-make | object | The make object this tire model is linked to. Parameters are outlined below.
-classes | array of objects | An array of all subclasses pertaining to this tire model object. Parameters are outlined below.
-
-#### Tire Make Object Parameters
-
-Parameter | Type | Description
---------- | ---- | -----------
-id | integer | The identifier for the given make within Tire Library.
-name | string | The name of the given make.
-imageUrl | string | The link to the image of a given make.
-dotRegUrl | string | The link to the Department of Transport Registration for a given make.
+model | [Tire Model](https://developer.tirelibrary.com/#tire-model) | The tire model object.
 
 #### Subclass Object Parameters
 
