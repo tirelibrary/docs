@@ -1,4 +1,4 @@
-## Search Sizes (General)
+## Search General
 
 ```csharp
     HttpClient client = new HttpClient
