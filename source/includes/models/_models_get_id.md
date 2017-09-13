@@ -75,7 +75,7 @@ This endpoint allows you to get information on a specific tire model via their i
 https://api.tirelibrary.com/v1/data/models/:id`
 
 <aside class="notice">
-Requires a Professional Developer plan with Tire Library API.
+Requires a Developer plan with Tire Library API.
 </aside>
 
 ### Query Parameters

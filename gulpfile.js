@@ -147,3 +147,5 @@ gulp.task('serve', ['NO_COMPRESS', 'default'], function() {
 
   gulp.src(__filename).pipe(open({uri: 'http://localhost:4567'}));
 });
+
+gulp.task('prepare', ['clean', 'default', 'serve']);

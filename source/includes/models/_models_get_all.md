@@ -10,13 +10,16 @@
 
     // Hitting the endpoint.
     object response = Newtonsoft.Json.JsonConvert.DeserializeObject
-        (await client.GetStringAsync("data/models"));
+        (await client.GetStringAsync("data/models?page=2"));
 ```
 
 ```ruby
     require 'net/http'
     
     uri = URI('https://api.tirelibrary.com/v1/data/models')
+
+    # Adding the page parameter to the URI.
+    uri.query = URI.encode_www_form(page: '2')
 
     request = Net::HTTP::Get.new uri
 
@@ -48,6 +51,12 @@
                 "imageUrl": "https://linktotheimagewillbehere",
                 "rotationImageUrls": null,
                 "videoUrl": null,
+                "make": {
+                    "id": 2,
+                    "name": "UNIROYAL",
+                    "imageUrl": "https://linktoimagewillbehere",
+                    "dotRegUrl": "https://www.tireregistration.com/us_en_uniroyal.html"
+                },
                 "classes": [
                     {
                         "subclass": {
@@ -73,33 +82,19 @@ This endpoint allows you to get all models and their information.
 https://api.tirelibrary.com/v1/data/models`
 
 <aside class="notice">
-Requires a Professional Developer plan with Tire Library API.
+Requires a Developer plan with Tire Library API.
 </aside>
+
+### Query Parameters
+
+Parameter | Type | Required | Default | Description
+--------- | ---- | -------- | ------- | -----------
+page | int | No | 1 | The page number to be retrieved. Currently returns 30 items per page.
 
 ### Response Parameters
 
-An array of Tire Model objects.
-
-#### Tire Model Object Parameters
+A Tire Model object.
 
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | The identifier for the given tire model within Tire Library.
-name | string | The name of the given tire model.
-description | string | The description of the tire model.
-benefits | string | The benefits of the tire model, delimited by '*' (asterisk) characters.
-features | string | The features of the tire model, delimited by '*' (asterisk) characters.
-manufacturerUrl | string | The link to the manufacturer of the tire model.
-videoUrl | string | The link of
-imageUrl | string | The link to the image of the tire model.
-rotationImageUrls | string | An array of 24 strings containing the image links for viewing the tire model from multiple angles.
-classes | array of objects | An array of all subclasses pertaining to this tire model object. Parameters are outlined below.
-
-#### Subclass Object Parameters
-
-Parameter | Type | Description
---------- | ---- | -----------
-id | integer | The identifier for the given subclass within Tire Library.
-name | string | The name of the given subclass.
-description | string | The description of the subclass.
-keywords | string | The keywords pertaining to the subclass, delimited by ',' (comma) characters.
+models | [Tire Model](https://developer.tirelibrary.com/#tire-model) Array | An array of Tire Model objects (includes associated Tire Makes).
