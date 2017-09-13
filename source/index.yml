@@ -24,6 +24,7 @@ includes:
   - search/_search_makes
   - search/_search_models
   - search/_search_sizes
+  - search/_search_specific
 
 # Sizes endpoints
   - sizes/_sizes

@@ -1,14 +1,21 @@
 # Changelog
 
+## 13/09/2017
+
+### New
+
+* A new search endpoint is now available: [Search Specific](https://developer.tirelibrary.com/#search-specific). This endpoint allows you
+to search for a tire size based on a make and item number specifically.
+
 ## 30/08/2017
 
 ### Changes
 
 * The following endpoints have been updated and now can receive extra parameters for better search filtering:
-  * [Search Sizes (General)](https://developer.tirelibrary.com/#search-sizes-general-):
+  * [Search General](https://developer.tirelibrary.com/#search-general):
     * Now receives `filters` which can consist of any field to improve search results; and
     * Also accepts `page` and `pageSize` to define the amount of results to be returned on a per-search basis.
-  * [Search Sizes (Sizes Only)](https://developer.tirelibrary.com/#search-sizes-sizes-only-):
+  * [Search Sizes](https://developer.tirelibrary.com/#search-sizes):
     * Now receives `sectionWidth`, `aspectRatio` and `rimSize` to better search tires by size specifically;
     * Also accepts `page` and `pageSize` to define the amount of results to be returned on a per-search basis; and
     * Can take in the `all` parameter (defaulted to `false`) to retrieve all fields for the results as opposed to just the usual set.
